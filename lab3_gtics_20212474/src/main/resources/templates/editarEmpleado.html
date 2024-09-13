@@ -5,6 +5,29 @@
     <title>Editar empleado</title>
 </head>
 <body>
+<form>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" th:value="${employee.first_name}" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="apellido" th:value="${employee.last_name}" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="correo" class="form-label">Correo</label>
+        <input type="email" class="form-control" id="correo" th:value="${employee.phone_number}" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="departamento" class="form-label">Departamento</label>
+        <input type="text" class="form-control" id="departamento" th:value="${employee.salary}" readonly>
+    </div>
 
+
+    <a th:href="@{/employee}" class="btn btn-primary">Cancelar</a>
+    <a th:href="@{/employee}" class="btn btn-primary">Guardar</a>
+
+</form>
+<h5>No hubo mas tiempo para agregar los demas parametros :c</h5>
 </body>
 </html>
